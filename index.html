@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css" media="all">
+        <script src="js-file.js" defer></script>
+        <title>StarBurst's Library project</title>
+    </head>
+
+    <body>
+        <header>
+            StarBurst's Library project
+        </header>
+
+        <main>
+            <div>
+                <button id="openForm">Add Book!</button>
+                <div class="form-popup" id="addBookForm">
+                    <form class="form-container">
+                        <h3>Enter the information</h1>
+                        <label for="title">Title: </label>
+                        <input type="text" name="title" id="title" required>
+
+                        <label for="author">Author: </label>
+                        <input type="text" name="author" id="author" required>
+
+                        <label for="pages">Pages: </label>
+                        <input type="text" name="pages" id="pages" required>
+
+                        <div class="form-checkbox">
+                            <label for="isRead">Read?</label>
+                            <input type="checkbox" name="isRead" id="isRead">
+                        </div>
+                    
+                        <div class="form-button-container">
+                            <button type="button" class="btn" id="addBook">Add</button>
+                            <button type="button" class="btn-cancel" id="closeForm">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="book-card-grid">
+            </div>
+        </main>
+
+        <footer>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,177 @@
+html {
+    background-color: rgba(32,33,36,1);
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    font-size: 500%;
+    display: flex;
+    justify-content: center;
+    color: blanchedalmond;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#openForm {
+    font-size: 150%;
+    padding: 5% 10% 5% 10%;
+    white-space: nowrap;
+    display: flex;
+    justify-self: center;
+    background-color: transparent;
+    color: wheat;
+    border: 1px solid #888c92af;
+    border-radius: 5px;
+}
+
+#openForm:hover {
+    background-color: #888c92af;
+}
+
+.form-popup {
+    display: none;
+    position: absolute;
+    position: center;
+    border: 3px solid #f1f1f1;
+    background-color: rgba(32,33,36,1);
+    z-index: 1;
+    border-radius:5%;
+    width: 15%;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 5% 5% 5%;
+    width: auto;
+}
+
+form > h3 {
+    color: white;
+    white-space: nowrap;
+}
+
+label {
+    color: white;
+    margin-top: 3%;
+}
+
+input[type="text"] {
+    font-size: large;
+    border: 1px solid #888c92af;
+    border-radius: 5px;
+    background-color: transparent;
+    color: blanchedalmond;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #888c92af;
+    outline: none;
+    color: blanchedalmond;
+}
+
+input[type="text"]:hover {
+    background-color: rgba(255, 255, 255,0.05);
+    border: 1px solid rgba(255, 255, 255,0.05);
+}
+
+.form-checkbox {
+    margin-top: 3%;
+}
+
+.form-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    gap: 30%;
+}
+
+#addBook {
+    font-size: 150%;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+}
+
+#addBook:hover {
+    background-color: #4CAF50;
+}
+
+#closeForm {
+    font-size: 150%;
+    border: 2px solid #e05717;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+}
+
+#closeForm:hover {
+    background-color: #e05717;
+}
+
+.book-card-grid {
+    display: grid;
+    margin-top: 2%;
+    grid-template-columns: 300px 300px 300px;
+    grid-auto-rows: auto;
+    margin-left: 2%;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255,0.05);
+    border-radius: 10px;
+    border: 1px solid #888c92af;
+    margin-top: 6%;
+    margin-right: 6%;
+}
+
+.h1 {
+    color: blanchedalmond;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.h2 {
+    color: blanchedalmond;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.h3 {
+    color: blanchedalmond;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.btn-green{
+    margin-top: 4%;
+    font-size: 150%;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+}
+
+.btn-green:hover {
+    background-color: #4CAF50;
+}
+
+.btn-red {
+    margin-top: 4%;
+    font-size: 150%;
+    border: 2px solid #e05717;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+}
+
+.btn-red:hover {
+    background-color: #e05717;
+}
