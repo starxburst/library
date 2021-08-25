@@ -57,6 +57,7 @@ const bookGrid = document.querySelector(".book-card-grid");
 
 //render book card
 function renderBookCard() {
+    populateStorage();
     resetBookGrid();
     for (i = 0; i < myLibrary.length; i++) {
         const bookCard = document.createElement("div");
@@ -123,4 +124,24 @@ function toggleReadButton(e) {
 }
 
 //render book card when refresh page
-renderBookCard()
+renderBookCard();
+
+//local storage
+function checkLocalStorage() {
+    if(!localStorage.getItem("savedData")) {
+        populateStorage();
+    } else {
+        setStyles();
+    }
+}
+
+function populateStorage() {
+    localStorage.setItem("savedData", JSON.stringify(myLibrary));
+    setStyles();
+}
+
+function setStyles() {
+    myLibrary = JSON.parse(localStorage.getItem("savedData"));
+}
+
+checkLocalStorage();
