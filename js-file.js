@@ -23,6 +23,7 @@ function addBookToLibrary(e) {
     const isRead = document.querySelector("#isRead").checked;
     const book = new Book(title, author, pages, isRead);
     myLibrary.push(book);
+    populateStorage();
     renderBookCard()
   }
 
@@ -57,7 +58,6 @@ const bookGrid = document.querySelector(".book-card-grid");
 
 //render book card
 function renderBookCard() {
-    populateStorage();
     resetBookGrid();
     for (i = 0; i < myLibrary.length; i++) {
         const bookCard = document.createElement("div");
@@ -109,6 +109,7 @@ function renderBookCard() {
 function removeBook(e) {
     console.log(e.target.getAttribute("data-id"));
     myLibrary.splice(e.target.getAttribute("data-id"), 1);
+    populateStorage();
     renderBookCard();
 }
 
@@ -120,20 +121,18 @@ function toggleReadButton(e) {
     } else {
         myLibrary[e.target.getAttribute("data-id")].isRead = true;
     }
+    populateStorage();
     renderBookCard();
 }
 
-//render book card when refresh page
-renderBookCard();
-
 //local storage
-function checkLocalStorage() {
-    if(!localStorage.getItem("savedData")) {
-        populateStorage();
-    } else {
-        setStyles();
-    }
-}
+//function checkLocalStorage() {
+//    if(!localStorage.getItem("savedData")) {
+//        populateStorage();
+//    } else {
+//        setStyles();
+//    }
+//}
 
 function populateStorage() {
     localStorage.setItem("savedData", JSON.stringify(myLibrary));
@@ -144,4 +143,9 @@ function setStyles() {
     myLibrary = JSON.parse(localStorage.getItem("savedData"));
 }
 
-checkLocalStorage();
+//checkLocalStorage();
+console.log(localStorage);
+setStyles();
+
+//render book card when refresh page
+renderBookCard();
