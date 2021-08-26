@@ -126,13 +126,13 @@ function toggleReadButton(e) {
 }
 
 //local storage
-//function checkLocalStorage() {
-//    if(!localStorage.getItem("savedData")) {
-//        populateStorage();
-//    } else {
-//        setStyles();
-//    }
-//}
+function checkLocalStorage() {
+    if(!localStorage.getItem("savedData")) {
+        populateStorage();
+    } else {
+        setStyles();
+    }
+}
 
 function populateStorage() {
     localStorage.setItem("savedData", JSON.stringify(myLibrary));
@@ -143,9 +143,8 @@ function setStyles() {
     myLibrary = JSON.parse(localStorage.getItem("savedData"));
 }
 
-//checkLocalStorage();
+checkLocalStorage();
 console.log(localStorage);
-setStyles();
 
 //render book card when refresh page
 renderBookCard();
