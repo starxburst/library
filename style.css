@@ -52,7 +52,6 @@ main {
 
 form > h3 {
     color: white;
-    white-space: nowrap;
 }
 
 label {
@@ -87,7 +86,7 @@ input[type="text"]:hover {
     display: flex;
     justify-content: center;
     margin-top: 10%;
-    gap: 30%;
+    gap: 10%;
 }
 
 #addBook {
